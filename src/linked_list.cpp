@@ -74,7 +74,6 @@ namespace itis {
         }
         if(index == size_ - 1){
             Node *node = find_node(index - 1);
-            delete node->next;
             node->next = nullptr;
             Element result = tail_->data;
             tail_ = node;
