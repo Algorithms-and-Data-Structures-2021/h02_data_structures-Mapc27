@@ -67,9 +67,10 @@ namespace itis {
         // Tip 1: рассмотрите случай, когда удаляется элемент в начале списка
         if(index == 0) {
             Element result;
+            Node *node = head_->next;
             result = head_->data;
             delete head_;
-            head_ = head_->next;
+            head_ = node;
             size_ -= 1;
             return result;
         }
@@ -77,6 +78,7 @@ namespace itis {
             Node *node = find_node(index - 1);
             node->next = nullptr;
             Element result = tail_->data;
+            delete tail_;
             tail_ = node;
             size_ -= 1;
             return result;
