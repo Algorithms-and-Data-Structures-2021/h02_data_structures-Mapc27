@@ -99,6 +99,7 @@ namespace itis {
             Node *curr = head_;
             Node *time = curr->next;
             while (curr->next != nullptr) {
+                delete curr;
                 curr = time;
                 time = curr->next;
             }
