@@ -7,9 +7,12 @@ using namespace itis;
 
 int main(int argc, char **argv) {
   std::cout << "Hello, stranger!" << std::endl;
-
-  auto array_list = new ArrayList();
-
-  delete array_list;
+  LinkedList linked;
+  linked.Add(Element::GRAVITY_GUN);
+  linked.Add(Element::SECRET_BOX);
+  linked.Add(Element::DRAGON_BALL);
+  linked.Add(Element::CHERRY_PIE);
+  linked.Remove(1);
+  linked.Remove(1);
   return 0;
 }
