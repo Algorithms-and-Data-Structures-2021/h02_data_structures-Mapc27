@@ -68,6 +68,7 @@ namespace itis {
         if(index == 0) {
             Element result;
             result = head_->data;
+            delete head_;
             head_ = head_->next;
             size_ -= 1;
             return result;
@@ -87,7 +88,6 @@ namespace itis {
         Element result = remove_node->data;
         node->next = remove_node->next;
         delete remove_node;
-        delete node;
         size_ -= 1;
         // напишите свой код здесь ...
         return result;
